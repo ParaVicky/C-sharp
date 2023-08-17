@@ -11,11 +11,21 @@ int Prompt(string message)
     return result;
 }
 int number = Prompt("Введите трехзначное число >");
-if (number < 100 || number >= 1000)
+
+bool ValidateNumber(int num)
 {
-    Console.WriteLine("Вы ввели не трехзначное число. Повторите ввод");
-    return;
+    if (num >= 100 || num < 1000)
+    {
+        return true;
+    }
+    else
+    {
+        Console.WriteLine("Вы ввели не трехзначное число. Повторите ввод");
+        return false;
+    }
 }
+if (ValidateNumber(number))
+
 Console.WriteLine($"Введенное число '{number}' ");
 int secondRank = number / 10 % 10;
 Console.WriteLine($"Вторая цифра '{secondRank}' ");
