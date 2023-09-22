@@ -55,5 +55,5 @@ int MinIndexesRows(int[,]matrix)
 }
 int[,] array2d = CreateMaxrixRndInt(3, 4, 1, 10);
 PrintMatrix(array2d);
-int minIndexesRows = MinIndeexesRows(array2d);
+int minIndexesRows = MinIndexesRows(array2d);
 Console.WriteLine($"номер строки с наименьшей суммой элементов: {minIndexesRows}");
